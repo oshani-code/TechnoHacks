@@ -1,52 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 
-*{  margin: 0;
+*{
+    margin: 0;
     padding: 0;
-    font-family:monospace;
-   
-  }
+    box-sizing: border-box;
+    
+}
 
-  .main{
-    height:100vh; 
+body{ 
+    background:
+    linear-gradient(45deg, #92baac 45px, transparent 45px)64px 64px,
+    linear-gradient(45deg, #92baac 45px, transparent 45px,transparent 91px, #e1ebbd 91px, #e1ebbd 135px, transparent 135px),
+    linear-gradient(-45deg, #92baac 23px, transparent 23px, transparent 68px,#92baac 68px,#92baac 113px,transparent 113px,transparent 158px,#92baac 158px);
+    background-color:#e1ebbd;
+    background-size: 128px 128px;
+    color: #000;
+    font-family:Josefin Sans ;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    min-height: 100vh;
+}
+
+.container{
+    width: 700px;
+    height: 250px;
+    border: 0;
+    display: block;
+    border-radius: 25px;
+    padding: 24px 42px ;
+    background: linear-gradient(100deg, #b9e2d4,#e1ebbd); 
+    box-shadow: 0 0 15px rgb(146, 186, 172),
+                0 0 18px rgb(146 186 172/0.6),
+                0 0 19px rgb( 146 186 172/0.6),
+                0 0 10px rgb( 146 186 172/0.7);
+}
+
+h1{
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 30px;
+    color:#000;
+}
+
+.small-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.col-1{
+    width: 40%;
+}
+
+select, input{
+    font-size: 15px;
+    font-weight: 600;
     width: 100%;
-    display: flex; 
-    flex-direction: column;
-    justify-content: center; 
-    align-items: center; 
-    background-image:url("https://images.unsplash.com/photo-1580566176138-daa588058b59?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bXVsdGljb2xvcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60");
-    background-size:cover;
-    -webkit-background-clip: text;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    padding: 8px 15px;
+    background: #e1ebbd;
+}
+
+select:hover{
+    background:#b9e2d4;
     
+}
+
+button{
+    font-size: 17px;
+    border-radius: 15px;
+    background-color: orangered;
+    color: white;
+    border: 0;
+    width: 200px;
+    display: block;
+    padding: 10px;
+    margin: 25px auto ;
+    cursor: pointer;
+    transition: box-shadow 0.5s ease-in-out, border-color 0.5s ease-in-out;
+}
+
+
+button:hover{
+    background-image:linear-gradient(#A100FFFF,#119cfdff);
+    color: #ddd;
+    box-shadow: 0 0 5px rgb(161 0 255),
+                0 0 8px rgb(161 0 255/0.2),
+                0 0 9px rgb( 161 0 255/0.6),
+                0 0 10px rgb( 161 0 255/0.3);
+    border-color: #fff;
+}
+
+@media screen and (max-width:1300px){
+    body{
+        background-color:#145e61 ;
     }
+}
 
-    .main h1{
-    font-size: 3em;
-    margin-bottom: 12px ;
-    color:transparent;
-        
+@media screen and (min-width:400px){
+    .container{
+        background-color: #fff;
     }
-    
-    .main p{
-    
-        font-size: 3.5em;
-        text-transform: uppercase;
-        font-weight: bold;
-        color:transparent;
-        border-radius: 6px;
-    }    
+}
 
-    .box-shadow{     
-    
-             box-shadow: 2px 2px 2px #7e388b, 2px 2px 2px #7e388b, 3px 3px 3px #7e388b,
-             4px 4px 4px #7e388b,
-             5px 5px 5px #7e388b,
-             6px 6px 6px #7e388b;
-             
-            }  
-
-    @media only screen and (min-width:190px)  
-    {
-        body{
-           background-image: linear-gradient(0deg, #c0f14233 0%, #c0f14233 16.667%,#49d41f33 16.667%, #49d41f33 33.334%,#71de2b33 33.334%, #71de2b33 50.001%,#e8fb4e33 50.001%, #e8fb4e33 66.668%,#98e73633 66.668%, #98e73633 83.335%,#21ca1333 83.335%, rgba(33, 202, 19,0.2) 100.002%),linear-gradient(135deg, rgba(192, 241, 66,0.2) 0%, rgba(192, 241, 66,0.2) 16.667%,rgba(73, 212, 31,0.2) 16.667%, rgba(73, 212, 31,0.2) 33.334%,rgba(113, 222, 43,0.2) 33.334%, rgba(113, 222, 43,0.2) 50.001%,rgba(232, 251, 78,0.2) 50.001%, rgba(232, 251, 78,0.2) 66.668%,rgba(152, 231, 54,0.2) 66.668%, rgba(152, 231, 54,0.2) 83.335%,rgba(33, 202, 19,0.2) 83.335%, rgba(33, 202, 19,0.2) 100.002%),linear-gradient(90deg, rgba(192, 241, 66,0.2) 0%, rgba(192, 241, 66,0.2) 16.667%,rgba(73, 212, 31,0.2) 16.667%, rgba(73, 212, 31,0.2) 33.334%,rgba(113, 222, 43,0.2) 33.334%, rgba(113, 222, 43,0.2) 50.001%,rgba(232, 251, 78,0.2) 50.001%, rgba(232, 251, 78,0.2) 66.668%,rgba(152, 231, 54,0.2) 66.668%, rgba(152, 231, 54,0.2) 83.335%,rgba(33, 202, 19,0.2) 83.335%, rgba(33, 202, 19,0.2) 100.002%),linear-gradient(90deg, rgb(238, 207, 232),rgb(127, 195, 255));
-
-        }
-    } 
