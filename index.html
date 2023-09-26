@@ -1,19 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Countdown Timer</title>
-    <link rel="stylesheet" href="style.css" >
+    <title>CurrencyConverter</title>
+    <link rel="stylesheet" href="style.css">
+    
 </head>
-
 <body>
-
-    <div class="main">
-        <h1>COUNTDOWN BEGINS</h1>
-        <p id="countdown" class="box-shadow"></p>
+   <div class="container">
+    <h1>Currency Converter</h1>
+    <div class="small-container">
+        <div class="col-1">
+            <select class="currency">
+                <option value="">Select</option>
+            </select>
+            <input type="text" id="input_currency">
+        </div>
+        <div class="col-1">
+            <select name="" id="" class="currency">
+                <option>Select</option>
+            </select>
+            <input type="text" id="output_currency" disabled>
+        </div>        
     </div>
-<script src="script.js"></script>
+    <button onClick="converter()">Convert</button>
+   </div> 
+
+   <script src="script.js"></script>
 </body>
 </html>
