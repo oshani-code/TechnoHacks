@@ -1,30 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>CurrencyConverter</title>
-    <link rel="stylesheet" href="style.css">
-    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css" >
 </head>
-<body>
-   <div class="container">
-    <h1>Currency Converter</h1>
-    <div class="small-container">
-        <div class="col-1">
-            <select class="currency">
-                <option value="">Select</option>
-            </select>
-            <input type="text" id="input_currency">
-        </div>
-        <div class="col-1">
-            <select name="" id="" class="currency">
-                <option>Select</option>
-            </select>
-            <input type="text" id="output_currency" disabled>
-        </div>        
-    </div>
-    <button onClick="converter()">Convert</button>
-   </div> 
 
-   <script src="script.js"></script>
-</body>
+
+<body>
+    <div class="container">
+
+      <header class="header">
+        <h1 id="title" class="text-center">Online Website Registration</h1>
+        <p id="description" class="description text-center">
+          Thank you for taking the time to connect with us!!
+        </p>
+      </header>
+      <form id="form">
+        
+        <div class="form-group">
+            <label id="name-label" for="name">Full Name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              class="form-control"
+              placeholder="Enter your full name"
+              required
+            />
+          </div>
+        
+        <div class="form-group">
+          <label id="email-label" for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="form-control"
+            placeholder="Enter your Email"
+            required
+          />
+        </div>
+        
+        <div class="form-group">
+            <label for="phone" id="phone">Contact Number</label>
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              class="form-control"
+              placeholder="012-345-6789"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              required
+            />
+            <span class="clue">Format: 012-345-6789</span>
+          </div>
+
+       <div class="form-group">
+          <label id="number-label" for="number">Age<span class="clue">(optional)</span></label>
+          <input
+            type="number"
+            name="age"
+            id="number"
+            min="18"
+            max="99"
+            class="form-control"
+            placeholder="Age"
+          />
+          
+        </div>
+
+        <div>
+          <p>DOB</p>
+          <label for="date" id="date"></label>
+          <input type="date" id="date" class="form-control" placeholder="DOB">
+        
+        </div>
+
+        <div class="form-group">
+            <p>Gender</p>
+            <select id="dropdown" name="role" class="form-control" required>
+                <option disabled selected value>Please Select</option>
+                <option value="student">Male</option>
+                <option value="student">Female</option>
+                <option value="student">Prefer not to say</option>
+            </select>
+        </div>
+        
+
+        <div class="form-group">
+          <p>Would you recommend this website to a friend?</p>
+          <label>
+            <input
+              name="user-recommend"
+              value="definitely"
+              type="radio"
+              class="input-radio"
+              checked />Definitely</label>
+          
+          <label>
+            <input
+              name="user-recommend"
+              value="maybe"
+              type="radio"
+              class="input-radio"/>Maybe</label>
+
+          <label>
+            <input
+              name="user-recommend"
+              value="not-sure"
+              type="radio"
+              class="input-radio"/>Not sure</label>
+        
+        </div> 
+
+        <div class="form-group">
+          <p>From where you get to know about us?</p>
+          <select id="most-like" name="mostLike" class="form-control" required>
+            <option disabled selected value>Select an option</option>
+            <option value="pinterest">Pinterest</option>
+            <option value="instagram">Instagram</option>
+            <option value="facebook">Facebook</option>
+            <option value="youtube">Youtube</option>
+            <option value="whatsapp">Whatsapp</option>
+            <option value="other">Other</option>
+              
+          
+          </select>
+        </div> 
+
+        <div class="form-group">
+          
+          <label for="pass">Password<span class="clue">(Min 8 characters)</label>
+          <input type="password" id="pass" name="password" minlength="8" class="form-control" placeholder="Password" required/>
+      </div>
+
+      
+        <div class="form-group">
+          <p>Any comments or suggestions?</p>
+          <textarea
+            id="comments"
+            class="input-textarea"
+            name="comment"
+            placeholder="Enter your comment here...">
+        </textarea>
+        </div>
+        
+        <div class="form-group">
+         
+          <button type="submit" id="submit" class="submit-button">Submit</button>
+          
+        </div>
+        
+     </form>
+    
+    </div>
+  </body>
 </html>
